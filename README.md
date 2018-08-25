@@ -1,2 +1,2 @@
 # experience-in-angular
-Some experience in Angular development
+介绍一些Angular开发中遇到的问题及解决办法
