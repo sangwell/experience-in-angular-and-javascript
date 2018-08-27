@@ -1,7 +1,7 @@
 # experience-in-angular
 介绍一些Angular开发中遇到的问题及解决办法
 
-## 同时处理多个http请求
+## 1.同时处理多个http请求
 业务场景：页面中包含多个独立的下拉框，需要同事加载下拉列表。
 ```javascript
 import {Observable} from 'rxjs/Observable';
@@ -32,7 +32,7 @@ Observable.merge(http1, http2, http3).subscribe((res) => {
     })
 ```
 
-## 在Promise中返回Observable
+## 2.在Promise中返回Observable
 业务场景：这个问题是在Ionic开发中遇到的，当时在做一个demo，要求api地址是在界面上配置，做法是将api地址通过Storage库保存在app缓存，客户端发http请求的时候先去缓存中取api地址
 ```javascript
 import {Observable} from 'rxjs';
