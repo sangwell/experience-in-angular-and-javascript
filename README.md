@@ -53,17 +53,17 @@ post(url, parametersModel): Observable<any> {
 ## 3. Cannot read property 'xxx' of null解决办法
 [Bad]
 ```javascript
-    var data = null;
-    if (data.name) { // TypeError: Cannot read property 'name' of null
-      console.log('OK');
-    }
+var data = null;
+if (data.name) { // TypeError: Cannot read property 'name' of null
+    console.log('OK');
+}
 ```
 [Good]
 ```javascript
-    var data = null;
-    if (data && data.name) {
-      console.log('OK');
-    }
+var data = null;
+if (data && data.name) {
+    console.log('OK');
+}
 ```
 
 ## 4. 同时处理多个Promise
