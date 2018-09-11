@@ -52,7 +52,7 @@ post(url, parametersModel): Observable<any> {
 
 ## 3. Cannot read property 'xxx' of null解决办法
 [Bad]
-```
+```javascript
     var data = null;
     if (data.name) {
       console.log('OK');
