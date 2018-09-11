@@ -66,5 +66,20 @@ post(url, parametersModel): Observable<any> {
     }
 ```
 
+## 4. 同时处理多个Promise
+```javascript
+getStorage(names: Array<string>): Promise<Array<string>> {
+    return Promise.all([this.storage.get(names[0]), this.storage.get(names[1])]); // this.storage.get返回Promise
+}
+```
+
+## 5. 数组去重
+可以用es6新增的Set来实现，Set是一种数据结构，它和数组非常相似，但是成员的值都是唯一的。我们可以先把它转化成Set，再配合...解构运算符重新转化为数组，达到去重的目的。
+```javascript
+const arr = [1, 1, 2, 2, 3, 4, 5, 5];
+const new_arr = [...new Set(arr)];
+console.log(new_arr); // 输出[1, 2, 3, 4, 5]
+```
+
 
 
