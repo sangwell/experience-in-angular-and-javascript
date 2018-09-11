@@ -54,7 +54,7 @@ post(url, parametersModel): Observable<any> {
 [Bad]
 ```javascript
     var data = null;
-    if (data.name) {//TypeError: Cannot read property 'name' of null
+    if (data.name) { // TypeError: Cannot read property 'name' of null
       console.log('OK');
     }
 ```
