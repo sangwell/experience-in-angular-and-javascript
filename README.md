@@ -1,4 +1,4 @@
-# experience-in-angular
+# Experience In Angular&Javascript
 介绍一些Angular开发中遇到的问题及解决办法
 
 ## 1. 同时处理多个http请求
@@ -81,5 +81,16 @@ const new_arr = [...new Set(arr)];
 console.log(new_arr); // 输出[1, 2, 3, 4, 5]
 ```
 
+## 6. 变量作用域提升
+```javascript
+console.log(str); // 输出undefined
+var str = '123456';
+```
+[等价于]
+```javascript
+var str; // str为undefined
+console.log(str); // 输出undefined
+str = '123456';
+```
 
 
