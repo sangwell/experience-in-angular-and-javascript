@@ -2,7 +2,7 @@
 介绍一些Angular开发中遇到的问题及解决办法
 
 ## 1. 同时处理多个http请求
-业务场景：页面中包含多个独立的下拉框，需要同事加载下拉列表。
+业务场景：页面中包含多个独立的下拉框，需要同时加载下拉列表。
 ```javascript
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
