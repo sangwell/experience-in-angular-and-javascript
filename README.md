@@ -82,6 +82,8 @@ console.log(new_arr); // 输出[1, 2, 3, 4, 5]
 ```
 
 ## 6. 变量作用域提升
+变量作用域提升，也就是通过var申明的变量，会拿到该作用于的最顶层，此时变量只是申明，并没有赋值，所以打印该变量为undefined。
+let就不存在变量作用域提升
 ```javascript
 console.log(str); // 输出undefined
 var str = '123456';
