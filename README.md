@@ -7,7 +7,7 @@
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/forkJoin';
 import 'rxjs/add/observable/merge';
-import 'rxjs/add/observable/zip'
+import 'rxjs/add/observable/zip';
 
 let http1 = this.http.get('url');
 let http2 = this.http.get('url');
