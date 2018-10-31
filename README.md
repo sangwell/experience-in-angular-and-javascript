@@ -128,4 +128,14 @@ getJSON("/posts.json").then(function(json) {
 });
 ```
 
+## 8. 通过改变数组length清空、截取数组
+```javascript
+const arr = ['A','B','C','D','E','F'];
+arr.length = 3;
+console.log(arr); //=> ['A','B','C']
+
+arr.length = 0;
+console.log(arr); //=> []
+```
+
 
