@@ -138,4 +138,9 @@ arr.length = 0;
 console.log(arr); //=> []
 ```
 
+## 9. 创建纯对象
+```javascript
+const pureObject = Object.create(null);
+console.log(pureObject); //=> {}
+```
 
