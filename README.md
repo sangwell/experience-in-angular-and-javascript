@@ -144,3 +144,38 @@ const pureObject = Object.create(null);
 console.log(pureObject); //=> {}
 ```
 
+## 10.链式调用
+类的方法最后返回 this
+```javascript
+    class Person {
+        constructor(name, age, tall) {
+            this.name = name;
+            this.age = age;
+            this.tall = tall;
+        }
+
+        setName(name) {
+            this.name = name;
+            return this;
+        }
+
+        setAge(age) {
+            this.age = age;
+            return this;
+        }
+
+        setTall(tall) {
+            this.tall = tall;
+            return this;
+        }
+
+        save() {
+            console.log(this.name, this.age, this.tall);
+            return this;
+        }
+    }
+
+    const myself = new Person();
+    console.log(myself);
+    myself.setAge(20).setName('Jack').setTall(3).save();
+```
