@@ -179,3 +179,12 @@ console.log(pureObject); //=> {}
     console.log(myself);
     myself.setAge(20).setName('Jack').setTall(3).save();
 ```
+
+## 11.DIV垂直均分
+.father{
+      display:flex;
+      flex-direction: column;
+      div{
+            flex:1;
+      }
+}
