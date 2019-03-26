@@ -181,6 +181,7 @@ console.log(pureObject); //=> {}
 ```
 
 ## 11.DIV垂直均分
+```
 .father{
       display:flex;
       flex-direction: column;
@@ -188,3 +189,4 @@ console.log(pureObject); //=> {}
             flex:1;
       }
 }
+```
