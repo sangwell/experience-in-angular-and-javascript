@@ -197,3 +197,12 @@ arr.sort((a,b)=>{
 	return b.LayoutPosition - a.LayoutPosition
 });
 ```
+
+## 13.滑动条控制
+```
+function scrollToBottom() {
+        console.log(document.getElementById('content').scrollHeight);
+        const height = document.getElementById('content').scrollHeight;
+        document.getElementById('content').scrollTo(0, height);
+    }
+```
