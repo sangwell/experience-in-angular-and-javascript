@@ -206,3 +206,10 @@ function scrollToBottom() {
         document.getElementById('content').scrollTo(0, height);
     }
 ```
+
+## 14.对0值的判断
+```
+const flag = 0;
+console.log(flag === true);// false
+console.log(flag || flag === 0);// true
+```
