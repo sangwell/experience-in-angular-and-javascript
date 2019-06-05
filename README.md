@@ -191,6 +191,7 @@ console.log(pureObject); //=> {}
 }
 ```
 
+
 ## 12.数组根据某个字段排序
 ```
 arr.sort((a,b)=>{
@@ -212,4 +213,13 @@ function scrollToBottom() {
 const flag = 0;
 console.log(flag === true);// false
 console.log(flag || flag === 0);// true
+```
+
+## 15.div内部垂直居中
+```
+div{
+	display: flex;
+	justify-content: center;
+	align-items: Center;
+}
 ```
