@@ -223,3 +223,39 @@ div{
 	align-items: Center;
 }
 ```
+
+## 16.
+```
+<input type="range" min="0" max="100"/>
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+  }
+  /*滑块*/
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  /*滑动轨道*/
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 12px;
+    border-radius: 10px; /*将轨道设为圆角的*/
+    background: #bdbdbd;
+    //box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 24px;
+    width: 24px;
+    margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #007aff;
+    border-radius: 50%; /*外观设置为圆形*/
+    //border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+    //box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+    border: 6px solid #c8e0fe;
+  }
+```
