@@ -259,3 +259,11 @@ input[type=range] {
     border: 6px solid #c8e0fe;
   }
 ```
+
+## 17.溢出，省略号
+```
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    ```
