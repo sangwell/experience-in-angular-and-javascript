@@ -266,4 +266,4 @@ input[type=range] {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    ```
+```
