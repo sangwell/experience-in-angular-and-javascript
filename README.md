@@ -273,3 +273,30 @@ input[type=range] {
 var name = "Bob", time = "today";
 `Hello ${name}, how are you ${time}?`
 ```
+## 19.async promise
+```javascript
+async test() {
+    await this.getThree().then(data => {
+      console.log(data);
+    });
+    await this.getTwo().then(data => {
+      console.log(data);
+    });
+    await this.getOne().then(data => {
+      console.log(data);
+    });
+  }
+
+  getOne() {
+    return this.http.get('http://localhost:50177/api/Test/GetOne').toPromise();
+  }
+
+  getTwo() {
+    return this.http.get('http://localhost:50177/api/Test/GetTwo').toPromise();
+  }
+
+  getThree() {
+    return this.http.get('http://localhost:50177/api/Test/GetThree').toPromise();
+  }
+```
+
