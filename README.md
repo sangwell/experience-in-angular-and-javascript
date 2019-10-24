@@ -181,7 +181,7 @@ console.log(pureObject); //=> {}
 ```
 
 ## 11.DIV垂直均分
-```
+```javascript
 .father{
       display:flex;
       flex-direction: column;
@@ -193,14 +193,14 @@ console.log(pureObject); //=> {}
 
 
 ## 12.数组根据某个字段排序
-```
+```javascript
 arr.sort((a,b)=>{
 	return b.LayoutPosition - a.LayoutPosition
 });
 ```
 
 ## 13.滑动条控制
-```
+```javascript
 function scrollToBottom() {
         console.log(document.getElementById('content').scrollHeight);
         const height = document.getElementById('content').scrollHeight;
@@ -209,14 +209,14 @@ function scrollToBottom() {
 ```
 
 ## 14.对0值的判断
-```
+```javascript
 const flag = 0;
 console.log(flag === true);// false
 console.log(flag || flag === 0);// true
 ```
 
 ## 15.div内部垂直居中
-```
+```javascript
 div{
 	display: flex;
 	justify-content: center;
@@ -225,7 +225,7 @@ div{
 ```
 
 ## 16.
-```
+```javascript
 <input type="range" min="0" max="100"/>
 
 input[type=range] {
@@ -261,7 +261,7 @@ input[type=range] {
 ```
 
 ## 17.溢出，省略号
-```
+```javascript
     max-width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -269,7 +269,7 @@ input[type=range] {
 ```
 
 ## 18.模板字符串
-```
+```javascript
 var name = "Bob", time = "today";
 `Hello ${name}, how are you ${time}?`
 ```
