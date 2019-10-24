@@ -267,3 +267,9 @@ input[type=range] {
     text-overflow: ellipsis;
     white-space: nowrap;
 ```
+
+## 18.模板字符串
+```
+var name = "Bob", time = "today";
+`Hello ${name}, how are you ${time}?`
+```
