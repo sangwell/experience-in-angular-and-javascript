@@ -224,7 +224,7 @@ div{
 }
 ```
 
-## 16.
+## 16.自定义滑动条
 ```javascript
 <input type="range" min="0" max="100"/>
 
