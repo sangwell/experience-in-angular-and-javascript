@@ -311,3 +311,12 @@ this.subject = this.subjectService.getTreeDevice().subscribe(deviceSNs => {
 
 this.subject.unsubscribe();
 ```
+
+## 21.数组删除项
+```javascript
+const index = this.list.findIndex(item => {
+          return item.Id === id;
+        });
+this.list.splice(index, 1);
+this.list = [...this.list];
+```
