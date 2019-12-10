@@ -320,3 +320,13 @@ const index = this.list.findIndex(item => {
 this.list.splice(index, 1);
 this.list = [...this.list];
 ```
+
+## 22.使用 Promise 实现异步 Either
+```javascript
+const exists = x => x != null;
+const ifExists = value => exists(value) ?
+  Promise.resolve(value) :
+  Promise.reject(`Invalid value: ${ value }`);
+ifExists(null).then(log).catch(log); // Invalid value: null
+ifExists('hello').then(log).catch(log); // hello
+```
