@@ -330,3 +330,14 @@ const ifExists = value => exists(value) ?
 ifExists(null).then(log).catch(log); // Invalid value: null
 ifExists('hello').then(log).catch(log); // hello
 ```
+## 23.ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked. Previous value: 'ngIf: false'. Current value: 'ngIf: true'.
+### 解决办法
+```javascript
+  constructor(public cdRef: ChangeDetectorRef) {
+  }
+  
+  ngAfterViewChecked() {
+    this.cdRef.detectChanges();
+    this.isLoading = true
+  }
+```
