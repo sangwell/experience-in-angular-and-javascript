@@ -341,3 +341,19 @@ ifExists('hello').then(log).catch(log); // hello
     this.isLoading = true
   }
 ```
+
+## 24.async-继发和并发的写法
+```
+async function aaa(){
+  let a = await some1()
+  let b = await some2()
+//这样的写法是继发的 相当于A执行完毕后再执行B
+}
+async function aaa(){
+  let a = some1()
+  let b = some2()
+  let aDone = await a
+  let bDone = await b
+//这样的写法是并发的 无先后顺序
+}
+```
