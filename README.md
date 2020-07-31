@@ -343,7 +343,7 @@ ifExists('hello').then(log).catch(log); // hello
 ```
 
 ## 24.async-继发和并发的写法
-```
+```javascript
 async function aaa(){
   let a = await some1()
   let b = await some2()
