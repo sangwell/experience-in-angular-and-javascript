@@ -356,4 +356,14 @@ async function aaa(){
   let bDone = await b
 //这样的写法是并发的 无先后顺序
 }
+
+// 并发的两种写法
+// 写法一
+let [foo, bar] = await Promise.all([getFoo(), getBar()]);
+
+// 写法二
+let fooPromise = getFoo();
+let barPromise = getBar();
+let foo = await fooPromise;
+let bar = await barPromise;
 ```
