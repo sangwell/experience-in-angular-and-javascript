@@ -377,3 +377,6 @@ fromEvent(window, 'resize').subscribe(data => {
     });
     
 ```
+
+## 26.angular组件的input参数如果绑定一个方法，这个方法会不断执行
+## 27.*ngFor="let item of functionA()"，这种情况functionA方法也会不断执行
