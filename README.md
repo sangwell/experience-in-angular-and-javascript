@@ -367,3 +367,13 @@ let barPromise = getBar();
 let foo = await fooPromise;
 let bar = await barPromise;
 ```
+
+## 25.在angular中监测window窗口变化
+```javascript
+import {fromEvent} from 'rxjs';
+
+fromEvent(window, 'resize').subscribe(data => {
+      console.log(data);
+    });
+    
+```
