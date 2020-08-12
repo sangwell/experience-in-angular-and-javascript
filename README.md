@@ -388,6 +388,9 @@ Angular 无法检测 property 的添加或移除。由于 Angular 会在初始�
 // 代替 `Object.assign(this.someObject, { a: 1, b: 2 })`
 this.someObject = Object.assign({}, this.someObject, { a: 1, b: 2 })
 ```
+Angular 不能检测以下数组的变动：
 
+当你利用索引直接设置一个数组项时，例如：this.items[indexOfItem] = newValue
+当你修改数组的长度时，例如：this.items.length = newLength
 
 
