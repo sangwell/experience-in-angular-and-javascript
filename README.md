@@ -380,3 +380,14 @@ fromEvent(window, 'resize').subscribe(data => {
 
 ## 26.angular组件的input参数如果绑定一个方法，这个方法会不断执行
 ## 27.*ngFor="let item of functionA()"，这种情况functionA方法也会不断执行
+
+## 28.Angular中如何脏值检测
+Angular 无法检测 property 的添加或移除。由于 Angular 会在初始化实例时对 property 执行 getter/setter 转化，所以 property 必须在 data 对象上存在才能让 Vue 将它转换为响应式的。
+有时你可能需要为已有对象赋值多个新 property，比如使用 Object.assign() 或 _.extend()。但是，这样添加到对象上的新 property 不会触发更新。在这种情况下，你应该用原对象与要混合进去的对象的 property 一起创建一个新的对象。
+```javascript
+// 代替 `Object.assign(this.someObject, { a: 1, b: 2 })`
+this.someObject = Object.assign({}, this.someObject, { a: 1, b: 2 })
+```
+
+
+
