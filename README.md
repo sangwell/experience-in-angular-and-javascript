@@ -393,4 +393,8 @@ Angular 不能检测以下数组的变动：
 当你利用索引直接设置一个数组项时，例如：this.items[indexOfItem] = newValue
 当你修改数组的长度时，例如：this.items.length = newLength
 
+```javascript
+// Array.prototype.splice
+vm.items.splice(indexOfItem, 1, newValue)
+```
 
