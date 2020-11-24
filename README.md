@@ -398,7 +398,7 @@ Angular 不能检测以下数组的变动：
 vm.items.splice(indexOfItem, 1, newValue)
 ```
 
-## 29.AsyncPipe
+## 29.Promise使用AsyncPipe
 ### html
 ```javascript
 <div>{{promise | async}}</div>
@@ -417,5 +417,23 @@ vm.items.splice(indexOfItem, 1, newValue)
         resolve('This is promise data');
       }, 2000);
     });
+  }
+```
+
+## 30.Observable使用AsyncPipe
+### html
+```javascript
+<div>{{observable | async}}</div>
+```
+### typescript
+```javascript
+  observable: Observable<number>;
+
+  constructor() {
+    this.observable = this.getObservable();
+  }
+
+  getObservable(): Observable<number> {
+    return of(123);
   }
 ```
