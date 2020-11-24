@@ -438,7 +438,7 @@ vm.items.splice(indexOfItem, 1, newValue)
   }
 ```
 
-## 31.AsyncPipe例子
+## 31.AsyncPipe例子(1)
 ### html
 ```javascript
 <div>
@@ -480,3 +480,44 @@ vm.items.splice(indexOfItem, 1, newValue)
     return of({id: 2, name: 'BBBB'});
   }
 ```
+
+## 32.AsyncPipe例子(2)
+### html
+```javascript
+<div>
+  <p>{{ (person$ | async)?.id }}</p>
+  <p>{{ (person$ | async)?.title }}</p>
+  <p>{{ (person$ | async)?.body }}</p>
+</div>
+```
+### typescript
+```javascript
+  person$: Observable<{ id: number; title: string; body: string }>;
+
+  ngOnInit() {
+    // 调用3次
+    this.person$ = this.http.get('https://jsonplaceholder.typicode.com/posts/1');
+    
+    // 改进 ,只调用1次 ,使用 RxJS 中的共享操作符，它在内部调用 publish().refCount()
+    this.person$ = this.http.get('https://jsonplaceholder.typicode.com/posts/1').pipe(share());
+  }
+
+```
+
+## 33.Promise vs Observable
+
+### Promise
+
+返回单个值
+
+不可取消的
+
+### Observable
+
+随着时间的推移发出多个值
+
+可以取消的
+
+支持 map、filter、reduce 等操作符
+
+延迟执行，当订阅的时候才会开始执行
