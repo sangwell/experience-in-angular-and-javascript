@@ -400,11 +400,11 @@ vm.items.splice(indexOfItem, 1, newValue)
 
 ## 29.AsyncPipe
 ### html
-```
+```javascript
 <div>{{promise | async}}</div>
 ```
 ### typescript
-```
+```javascript
   promise: Promise<string>;
 
   constructor() {
