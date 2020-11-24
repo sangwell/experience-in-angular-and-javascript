@@ -398,3 +398,24 @@ Angular 不能检测以下数组的变动：
 vm.items.splice(indexOfItem, 1, newValue)
 ```
 
+## 29.AsyncPipe
+### html
+```
+<div>{{promise | async}}</div>
+```
+### typescript
+```
+  promise: Promise<string>;
+
+  constructor() {
+    this.promise = this.getPromise();
+  }
+  
+  getPromise(): Promise<string> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve('This is promise data');
+      }, 2000);
+    });
+  }
+```
