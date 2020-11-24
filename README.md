@@ -437,3 +437,46 @@ vm.items.splice(indexOfItem, 1, newValue)
     return of(123);
   }
 ```
+
+## 31.AsyncPipe例子
+### html
+```javascript
+<div>
+  <h4>Heroes:</h4>
+  <ul>
+    <li *ngFor="let hero of heroes$ | async">
+      {{hero.name}}
+    </li>
+  </ul>
+  <h4>Hero:</h4>
+  <p>
+    <span *ngIf="hero$">{{(hero$ | async).id}}</span>
+    <span>{{(hero$ | async)?.name}}</span>
+  </p>
+</div>
+```
+### typescript
+```javascript
+  heroes$: Observable<Hero[]>;
+  hero$: Observable<Hero>;
+  
+  ngOnInit() {
+    setTimeout(() => {
+      this.heroes$ = this.getHeroes();
+      this.hero$ = this.getHero();
+    }, 2000);
+  }
+
+  getHeroes(): Observable<Hero[]> {
+    return of([
+      {id: 1, name: 'AAAA'},
+      {id: 2, name: 'BBBB'},
+      {id: 3, name: 'CCCC'},
+      {id: 4, name: 'DDDD'},
+    ]);
+  }
+
+  getHero(): Observable<Hero> {
+    return of({id: 2, name: 'BBBB'});
+  }
+```
