@@ -521,3 +521,27 @@ vm.items.splice(indexOfItem, 1, newValue)
 支持 map、filter、reduce 等操作符
 
 延迟执行，当订阅的时候才会开始执行
+
+
+## 34.Angular订阅销毁
+```javascript
+export class AbcComponent implements OnDestroy {
+	onDestroy$ = new Subject<boolean>();
+	
+	ngOnDestroy() {
+		this.onDestroy$.next(true);
+		this.onDestroy$.complete();
+	    }
+	    
+	subscribeAlarmShielding() {
+		this.subjectService.alarmShieldingSubject.pipe(
+		    tap(res => {
+			// ...
+		    }),
+		    takeUntil(this.onDestroy$)
+		).subscribe();
+	    }
+
+
+}
+```
