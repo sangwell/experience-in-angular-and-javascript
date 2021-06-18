@@ -545,3 +545,22 @@ export class AbcComponent implements OnDestroy {
 
 }
 ```
+
+## 35.定义一个比较器
+```javascript
+    function compare() {
+        return (object1, object2) => {
+            const value1 = object1['(\'age\')'];
+            const value2 = object2['(\'age\')'];
+            if (value2 < value1) {
+                return -1;
+            }
+            else if (value2 > value1) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+    }
+```
