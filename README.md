@@ -564,3 +564,22 @@ export class AbcComponent implements OnDestroy {
         }
     }
 ```
+
+## 36.数组group
+```javascript
+const sorted = this.groupBy(this.list, (item: any) => {
+      return [item.group];//按照group进行分组
+    });
+
+  groupBy(array: any[], f: any) {
+    const groups: any = {};
+    array.forEach(function (o) { //注意这里必须是forEach 大写
+      const group = JSON.stringify(f(o));
+      groups[group] = groups[group] || [];
+      groups[group].push(o);
+    });
+    return Object.keys(groups).map(function (group) {
+      return groups[group];
+    });
+  }
+```
