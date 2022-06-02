@@ -583,3 +583,17 @@ const sorted = this.groupBy(this.list, (item: any) => {
     });
   }
 ```
+
+## 37.Promise同步请求
+```
+[service]
+getSth() {
+        return this.http.get(url).toPromise();
+    }
+[调用]
+async run() {
+        const result = await this.getSth();
+        this.search();
+    }
+
+```
